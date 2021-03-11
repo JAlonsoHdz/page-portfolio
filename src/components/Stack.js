@@ -28,7 +28,10 @@ export default function Stack() {
         </div>
       </div>
       <p className="mt-10 mb-10 w-11/12 md:max-w-xl text-center inline-block text-xl md:text-2xl font-dosis ">
-        {content.stack.desc}.
+        {content.stack.desc1}.
+      </p>
+      <p className="mt-10 mb-10 w-11/12 md:max-w-xl text-center inline-block text-xl md:text-2xl font-dosis ">
+        {content.stack.desc2}.
       </p>
     </div>
   );

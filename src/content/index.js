@@ -57,7 +57,8 @@ export default {
         alt: 'node',
       },
     ],
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only`,
+    desc1: `Passionate about building distributed systems and cloud native solutions. I have experience working with microservice oriented architectures, containerized applications. ETL, web scraping, data driven dashboards, stream processing among other`,
+    desc2: `An advocate for descentralized applications (DAPPS) built on ethereum blockchain`,
   },
   contact: {
     title: 'Let\'s talk!',

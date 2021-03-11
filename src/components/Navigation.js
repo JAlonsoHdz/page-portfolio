@@ -25,7 +25,7 @@ export default function Navigation() {
         <div className="text-white text-xl">
           {content.nav.links.map((link, index) => {
             return (
-              <ScrollLink to={link.to} smooth={true}>
+              <ScrollLink to={link.to} smooth={true} key={index}>
                 <span className="mr-4 cursor-pointer" key={index}>
                   {link.text}
                 </span>

@@ -1,11 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import Modal from './Modal';
 
 import content from '../content';
 import useWindowPosition from '../hook/useWindowPosition';
 
 export default function Contact() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  
+  }
+
+  const transition = (duration) =>
+    `transition duration-${duration} ease-in-out`;
+  const styleTranslate = 'translate-y-10 opacity-0';
+
   const animated = useWindowPosition('header', 0.6, 4);
   return (
     <div
@@ -14,7 +27,7 @@ export default function Contact() {
     >
       <div
         style={{
-          minHeight: '50vh',
+          minHeight: '55vh',
           background: '#091C29',
         }}
         className="w-full md:w-4/5 md:rounded-xl shadow-2xl flex md:flex-row flex-col-reverse justify-around items-center"
@@ -60,6 +73,13 @@ export default function Contact() {
               );
             })}
           </div>
+          <button
+            className={` animate-bounce bg-indigo-500 px-10 py-3 text-lg uppercase text-white rounded-lg mt-10 hover:bg-indigo-300 transform  ${animated ? 'translate-y-0' : styleTranslate
+              } ${transition(3500)}`}
+            onClick={openModal}>
+            Contact
+          </button>
+          <Modal showModal={showModal} setShowModal={setShowModal}/>
         </div>
       </div>
     </div>
